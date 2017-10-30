@@ -25,7 +25,10 @@ class App extends Component {
       let res =  output.data.children;
       this.setState({ results: res });
     })
-    .catch(err => { throw err; });
+    .catch(err => { 
+      console.log('Error: ', err);
+      // throw err;
+    });
   }
 
   clear() {
